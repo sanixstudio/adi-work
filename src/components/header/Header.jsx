@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-blue-500 p-4">
+    <div className="bg-[#1F2937] p-4 z-10">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -39,36 +40,61 @@ const Header = () => {
           {/* Desktop menu */}
           <ul className="hidden md:flex space-x-10">
             <li>
-              <a href="/" className="text-white hover:text-gray-300">
+              <Link
+                to="/"
+                smooth={true}
+                duration={500}
+                className="text-white hover:text-gray-300 cursor-pointer"
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#About" className="text-white hover:text-gray-300">
+              <Link
+                to="#About"
+                smooth={true}
+                duration={500}
+                className="text-white hover:text-gray-300 cursor-pointer"
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#Services" className="text-white hover:text-gray-300">
+              <Link
+                to="#Services"
+                smooth={true}
+                duration={500}
+                className="text-white hover:text-gray-300 cursor-pointer"
+              >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#work" className="text-white hover:text-gray-300">
+              <Link
+                to="#work"
+                smooth={true}
+                duration={500}
+                className="text-white hover:text-gray-300 cursor-pointer"
+              >
                 Work
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="text-white hover:text-gray-300">
+              <Link
+                to="#contact"
+                smooth={true}
+                duration={500}
+                className="text-white hover:text-gray-300 cursor-pointer"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           {/* Mobile menu */}
           <AnimatePresence>
             {isOpen && (
               <motion.div
-                className="fixed top-14 left-0 w-full bg-blue-500 text-white py-4"
+                className="fixed top-14 left-0 w-full bg-slate-800 text-white py-4"
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
@@ -77,35 +103,52 @@ const Header = () => {
               >
                 <ul className="text-center">
                   <li>
-                    <a href="/" className="block py-2 hover:text-gray-300">
+                    <Link
+                      to="/"
+                      className="block py-2 hover:text-gray-300 cursor-pointer"
+                    >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#about" className="block py-2 hover:text-gray-300">
+                    <Link
+                      to="#about"
+                      smooth={true}
+                      duration={500}
+                      className="block py-2 hover:text-gray-300 cursor-pointer"
+                    >
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#services"
-                      className="block py-2 hover:text-gray-300"
+                    <Link
+                      to="#services"
+                      smooth={true}
+                      duration={500}
+                      className="block py-2 hover:text-gray-300 cursor-pointer"
                     >
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#work" className="block py-2 hover:text-gray-300">
+                    <Link
+                      to="#work"
+                      smooth={true}
+                      duration={500}
+                      className="block py-2 hover:text-gray-300 cursor-pointer"
+                    >
                       Work
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#contact"
-                      className="block py-2 hover:text-gray-300"
+                    <Link
+                      to="#contact"
+                      smooth={true}
+                      duration={500}
+                      className="block py-2 hover:text-gray-300 cursor-pointer"
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </motion.div>

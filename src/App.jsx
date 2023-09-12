@@ -1,9 +1,14 @@
 import { Layout } from "./layout";
+import { About, Contact, Hero, Services, Work } from "./containers";
 
 function App() {
   return (
     <Layout>
-      <h1 className="text-4xl">Main</h1>
+      <Hero />
+      <About />
+      <Services />
+      <Work />
+      <Contact />
     </Layout>
   );
 }
