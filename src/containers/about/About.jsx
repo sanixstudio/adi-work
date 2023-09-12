@@ -70,43 +70,43 @@ const About = () => {
                 <h2 className="text-2xl mt-20 mb-10">Skilled In</h2>
                 <div className="flex justify-center md:justify-normal flex-wrap gap-5">
                   <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
-                    <AiOutlineHtml5 color="#dd4b25" size={36} />
+                    <AiOutlineHtml5 color="#dd4b25" size={48} />
                     <span className="text-sm">HTML</span>
                   </div>
                   <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
-                    <BiLogoCss3 color="#254BDD" size={36} />
+                    <BiLogoCss3 color="#254BDD" size={48} />
                     <span className="text-sm">CSS</span>
                   </div>
                   <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
-                    <BiLogoJavascript color="#EFD81D" size={36} />
+                    <BiLogoJavascript color="#EFD81D" size={48} />
                     <span className="text-sm">JavaScript</span>
                   </div>
                   <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
-                    <BiLogoTypescript color="#2F74C0" size={36} />
+                    <BiLogoTypescript color="#2F74C0" size={48} />
                     <span className="text-sm">TypeScript</span>
                   </div>
                   <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
-                    <BiLogoReact color="#5ED3F3" size={36} />
+                    <BiLogoReact color="#5ED3F3" size={48} />
                     <span className="text-sm">React</span>
                   </div>
                   <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
-                    <TbBrandNextjs size={36} />
+                    <TbBrandNextjs size={48} />
                     <span className="text-sm">Next.js</span>
                   </div>
                   <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
-                    <BiLogoNodejs color="#73AA5D" size={36} />
+                    <BiLogoNodejs color="#73AA5D" size={48} />
                     <span className="text-sm">Node.js</span>
                   </div>
                   <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
-                    <SiExpress size={36} />
+                    <SiExpress size={48} />
                     <span className="text-sm">Express</span>
                   </div>
                   <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
-                    <BiLogoMongodb color="#52A946" size={36} />
+                    <BiLogoMongodb color="#52A946" size={48} />
                     <span className="text-sm">MongoDB</span>
                   </div>
                   <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
-                    <BiLogoGraphql color="#DE33A6" size={36} />
+                    <BiLogoGraphql color="#DE33A6" size={48} />
                     <span className="text-sm">GraphQl</span>
                   </div>
                 </div>

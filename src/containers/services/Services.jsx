@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
+import { MdDeveloperMode } from "react-icons/md";
+import { TbStack3 } from "react-icons/tb";
+import { GrOptimize } from "react-icons/gr";
 
-import fullstack from "../../assets/images/full-stack.jpg";
-import dev from "../../assets/images/dev.jpg";
-import optimize from "../../assets/images/optimize.jpg";
-import responsive from "../../assets/images/mobile.jpg";
+import mobileFriendly from "../../assets/images/mobile-friendly.png";
 
 const Services = () => {
   return (
     <Element name="services">
       <div
-        className="py-40 pb-60 md:max-w-[1440px] mx-auto px-10"
+        className="flex flex-col justify-center py-40 pb-60 md:max-w-[1440px] min-h-screen mx-auto px-10"
         id="#services"
       >
         <h1 className="text-4xl md:text-6xl font-bold uppercase">Services</h1>
@@ -26,10 +26,10 @@ const Services = () => {
           </h2>
           <div className="mt-10 flex flex-wrap justify-center items-start gap-20 w-full">
             <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-              <img src={dev} alt="service" />
+              <MdDeveloperMode size={64} />
               <p className="leading-7">
-                <span className="tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
-                  Website Development
+                <span className="text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
+                  Web Application Development
                 </span>
                 I create high-quality websites that align with the
                 company&apos;s brand and goals. Focus on creating user-friendly
@@ -38,9 +38,9 @@ const Services = () => {
               </p>
             </div>
             <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-              <img src={fullstack} alt="service" />
+              <TbStack3 size={64} />
               <p className="leading-7">
-                <span className="tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
+                <span className="text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
                   Building Full Stack Solutions
                 </span>
                 I optimize website usability and accessibility for exceptional
@@ -49,21 +49,9 @@ const Services = () => {
               </p>
             </div>
             <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-              <img src={responsive} alt="service" />
+              <GrOptimize size={64} />
               <p className="leading-7">
-                <span className="tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
-                  Creating Mobile Responsive Apps
-                </span>
-                I specialize in responsive design, creating websites that
-                seamlessly adapt to various devices and screen sizes. This
-                ensures accessibility and visual appeal across desktops,
-                tablets, and mobile devices, catering to a diverse user base.
-              </p>
-            </div>
-            <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-              <img src={optimize} alt="service" />
-              <p className="leading-7">
-                <span className="tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
+                <span className="text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
                   Performance Optimization:
                 </span>
                 I optimize websites for fast loading times and smooth
@@ -71,6 +59,18 @@ const Services = () => {
                 caching, and asset compression, I enhance the user experience,
                 boost search engine rankings, and drive organic traffic to the
                 site.
+              </p>
+            </div>
+            <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
+              <img src={mobileFriendly} alt="service" />
+              <p className="leading-7">
+                <span className="text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
+                  Creating Mobile Responsive Apps
+                </span>
+                I specialize in responsive design, creating websites that
+                seamlessly adapt to various devices and screen sizes. This
+                ensures accessibility and visual appeal across desktops,
+                tablets, and mobile devices, catering to a diverse user base.
               </p>
             </div>
           </div>
