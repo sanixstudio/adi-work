@@ -10,6 +10,10 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   // Define variants for the mobile menu animation
   const menuVariants = {
     hidden: { y: "-100%", opacity: 0 },
@@ -51,9 +55,10 @@ const Header = () => {
             </li>
             <li>
               <Link
-                to="#About"
+                to="#about"
                 smooth={true}
                 duration={500}
+                onClick={closeMenu}
                 className="text-white hover:text-gray-300 cursor-pointer"
               >
                 About
@@ -61,9 +66,10 @@ const Header = () => {
             </li>
             <li>
               <Link
-                to="#Services"
+                to="#services"
                 smooth={true}
                 duration={500}
+                onClick={closeMenu}
                 className="text-white hover:text-gray-300 cursor-pointer"
               >
                 Services
@@ -74,6 +80,7 @@ const Header = () => {
                 to="#work"
                 smooth={true}
                 duration={500}
+                onClick={closeMenu}
                 className="text-white hover:text-gray-300 cursor-pointer"
               >
                 Work
@@ -84,6 +91,7 @@ const Header = () => {
                 to="#contact"
                 smooth={true}
                 duration={500}
+                onClick={closeMenu}
                 className="text-white hover:text-gray-300 cursor-pointer"
               >
                 Contact
@@ -115,6 +123,7 @@ const Header = () => {
                       to="#about"
                       smooth={true}
                       duration={500}
+                      onClick={closeMenu}
                       className="block py-2 hover:text-gray-300 cursor-pointer"
                     >
                       About
@@ -125,6 +134,7 @@ const Header = () => {
                       to="#services"
                       smooth={true}
                       duration={500}
+                      onClick={closeMenu}
                       className="block py-2 hover:text-gray-300 cursor-pointer"
                     >
                       Services
@@ -135,6 +145,7 @@ const Header = () => {
                       to="#work"
                       smooth={true}
                       duration={500}
+                      onClick={closeMenu}
                       className="block py-2 hover:text-gray-300 cursor-pointer"
                     >
                       Work
@@ -145,6 +156,7 @@ const Header = () => {
                       to="#contact"
                       smooth={true}
                       duration={500}
+                      onClick={closeMenu}
                       className="block py-2 hover:text-gray-300 cursor-pointer"
                     >
                       Contact

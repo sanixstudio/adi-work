@@ -1,11 +1,12 @@
 import { Button } from "flowbite-react";
-import imageSrc from "../../assets/images/adi.jpg";
 import { BsFillGearFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 
+import imageSrc from "../../assets/images/adi2.jpg";
+
 const Hero = () => {
   return (
-    <div className="flex text-center px-4 flex-col justify-center w-full my-10 sm:my-20 md:my-0 items-center h-auto md:min-h-[calc(100vh-72px)] md:py-10">
+    <div className="flex text-center px-4 flex-col justify-center w-full my-10 md:my-0 items-center h-screen md:min-h-[calc(100vh-72px)]">
       <img
         src={imageSrc}
         alt="Adnan Niaz"
