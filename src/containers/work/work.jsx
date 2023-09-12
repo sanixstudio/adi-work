@@ -2,11 +2,13 @@
 import { useState } from "react";
 import { Element } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
+import { BsCodeSlash } from "react-icons/bs";
+import { LuMousePointerClick } from "react-icons/lu";
 
 const ProjectCard = ({ project }) => {
   return (
     <motion.div
-      className="relative group cursor-pointer"
+      className="relative group"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
@@ -17,19 +19,30 @@ const ProjectCard = ({ project }) => {
         alt={project.name}
         className="w-full h-auto max-h-[300px] object-cover rounded-md transform transition-transform group-hover:scale-105"
       />
-      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-        <div className="text-white text-center">
-          <a
-            href={project.codeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block mb-2"
-          >
-            Code
-          </a>
-          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-            Demo
-          </a>
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm group-hover:bg-black/50 transition-opacity">
+        <div className="flex flex-col gap-4 text-white text-center">
+          <div className="flex w-full gap-4 border px-4 rounded-md items-center">
+            <a
+              href={project.codeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block font-bold text-lg"
+            >
+              Code
+            </a>
+            <BsCodeSlash size={36} />
+          </div>
+          <div className="flex w-full gap-4 border px-4 rounded-md items-center">
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block font-bold text-lg"
+            >
+              Demo
+            </a>
+            <LuMousePointerClick size={36} />
+          </div>
         </div>
       </div>
     </motion.div>
@@ -78,7 +91,7 @@ const Work = () => {
   return (
     <Element name="work" id="#work">
       <div className="min-h-screen flex justify-center items-center bg-gradient-to-b from-slate-200 to-slate-100">
-        <div className="container px-20 mx-auto p-4">
+        <div className="container my-20 px-20 mx-auto p-4">
           <h1 className="text-4xl md:text-6xl mb-20 font-bold uppercase">
             Projects
           </h1>

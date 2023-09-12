@@ -17,8 +17,8 @@ import {
 const About = () => {
   return (
     <Element name="about">
-      <div className="md:pt-0 py-20 px-10 bg-gradient-to-b from-slate-300 to-slate-100 flex" id="#about">
-        <div className="md:my-20 pb-20 md:pb-40 flex flex-col md:max-w-[1440px] mx-auto">
+      <div className="min-h-screen px-10 bg-gradient-to-b from-slate-300/20 to-slate-100 flex items-center" id="#about">
+        <div className="my-20 flex flex-col md:max-w-[1440px] mx-auto">
           <motion.div
             initial={{ x: "-300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -36,8 +36,6 @@ const About = () => {
               className="flex-3 md:w-full self-start p-10 bg-gradient-to-t from-[#42444F] to-[#272932] max-w-[420px] mx-auto"
             >
               <img
-                width={600}
-                height={400}
                 src={"/images/adi.jpg"}
                 alt="adnan niaz"
                 className="object-contain"
