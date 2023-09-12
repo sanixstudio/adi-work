@@ -9,6 +9,7 @@ import infomovia from "../../assets/images/infomovia.png";
 import travelTracker from "../../assets/images/travel.png";
 import calmora from "../../assets/images/calmora.svg";
 import beerApp from "../../assets/images/beer.png";
+import chatBot from "../../assets/images/chatbot.png";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -19,12 +20,16 @@ const ProjectCard = ({ project }) => {
       exit={{ opacity: 0, scale: 0.8 }}
       transition={{ duration: 0.3 }}
     >
-      <img
-        src={project.image}
-        alt={project.name}
-        className="w-full h-auto max-h-[300px] object-contain rounded-md transform transition-transform"
-      />
-      <span className="font-bold text-white text-center block py-3 mt-2 bg-slate-600 rounded-md">{project.name}</span>
+      <div className="flex flex-col justify-between h-full">
+        <img
+          src={project.image}
+          alt={project.name}
+          className="w-full h-auto max-h-[300px] object-contain rounded-md transform transition-transform"
+        />
+        <span className="font-bold text-white text-center block py-3 mt-2 bg-slate-600 rounded-md">
+          {project.name}
+        </span>
+      </div>
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm group-hover:bg-black/50 transition-opacity">
         <div className="flex flex-col gap-4 text-white text-center">
           <a
@@ -80,6 +85,13 @@ const Work = () => {
       image: beerApp,
       codeUrl: "https://github.com/sanixstudio/beerApp",
       demoUrl: "https://sanixstudio.github.io/beerApp/",
+    },
+    {
+      type: "Ai",
+      name: "Summify Chat-bot",
+      image: chatBot,
+      codeUrl: "https://github.com/sanixstudio/ai-client",
+      demoUrl: "https://ai-client-six.vercel.app/",
     },
   ];
 
