@@ -31,10 +31,12 @@ const Services = () => {
                 <span className="text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
                   Web Application Development
                 </span>
-                I create high-quality websites that align with the
-                company&apos;s brand and goals. Focus on creating user-friendly
-                interfaces, intuitive navigation, and compelling visuals to
-                enhance user engagement and drive conversions.
+                <span className="text-gray-500">
+                  I create high-quality websites that align with the
+                  company&apos;s brand and goals. Focus on creating
+                  user-friendly interfaces, intuitive navigation, and compelling
+                  visuals to enhance user engagement and drive conversions.
+                </span>
               </p>
             </div>
             <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
@@ -43,9 +45,12 @@ const Services = () => {
                 <span className="text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
                   Building Full Stack Solutions
                 </span>
-                I optimize website usability and accessibility for exceptional
-                user experiences, increasing customer satisfaction and
-                retention.
+                <span className="text-gray-500">
+                  Mastering both front-end and back-end, I create end-to-end
+                  solutions. Crafting captivating interfaces and efficient
+                  server systems, I fuse creativity with functionality for
+                  impactful digital solutions.
+                </span>
               </p>
             </div>
             <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
@@ -54,11 +59,13 @@ const Services = () => {
                 <span className="text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
                   Performance Optimization:
                 </span>
-                I optimize websites for fast loading times and smooth
-                performance. Through techniques such as code optimization,
-                caching, and asset compression, I enhance the user experience,
-                boost search engine rankings, and drive organic traffic to the
-                site.
+                <span className="text-gray-500">
+                  I optimize websites for fast loading times and smooth
+                  performance. Through techniques such as code optimization,
+                  caching, and asset compression, I enhance the user experience,
+                  boost search engine rankings, and drive organic traffic to the
+                  site.
+                </span>
               </p>
             </div>
             <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
@@ -67,10 +74,12 @@ const Services = () => {
                 <span className="text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
                   Creating Mobile Responsive Apps
                 </span>
-                I specialize in responsive design, creating websites that
-                seamlessly adapt to various devices and screen sizes. This
-                ensures accessibility and visual appeal across desktops,
-                tablets, and mobile devices, catering to a diverse user base.
+                <span className="text-gray-500">
+                  I specialize in responsive design, creating websites that
+                  seamlessly adapt to various devices and screen sizes. This
+                  ensures accessibility and visual appeal across desktops,
+                  tablets, and mobile devices, catering to a diverse user base.
+                </span>
               </p>
             </div>
           </div>

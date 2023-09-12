@@ -14,10 +14,15 @@ import {
   BiLogoGraphql,
 } from "react-icons/bi";
 
+import developer from "../../assets/images/developer.png";
+
 const About = () => {
   return (
     <Element name="about">
-      <div className="min-h-screen px-10 bg-gradient-to-b from-slate-300/20 to-slate-100 flex items-center" id="#about">
+      <div
+        className="min-h-screen px-10 bg-gray-100 flex items-center"
+        id="#about"
+      >
         <div className="my-20 flex flex-col md:max-w-[1440px] mx-auto">
           <motion.div
             initial={{ x: "-300%", opacity: 0 }}
@@ -33,10 +38,10 @@ const About = () => {
               initial={{ x: "-300%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.7 }}
-              className="flex-3 md:w-full self-start p-10 bg-gradient-to-t from-[#42444F] to-[#272932] max-w-[420px] mx-auto"
+              className="flex-3 md:w-full self-start p-10 max-w-[420px] mx-auto"
             >
               <img
-                src={"/images/adi.jpg"}
+                src={developer}
                 alt="adnan niaz"
                 className="object-contain"
               />
@@ -50,7 +55,7 @@ const About = () => {
               <h2 className="mt-28 md:mt-0 text-4xl mb-10 font-bold uppercase">
                 A little about myself
               </h2>
-              <p className="mb-10 leading-7 text-lg">
+              <p className="mb-10 leading-7 text-lg text-gray-600">
                 I&apos;m a full-stack software engineer based in the Bay Area. I
                 specialize in helping startups grow their businesses by creating
                 intuitive and visually appealing user interfaces. With a strong
@@ -58,7 +63,7 @@ const About = () => {
                 the skills and experience necessary to tackle complex problems
                 and bring business ideas to life.
               </p>
-              <p className="leading-7 text-lg">
+              <p className="leading-7 text-lg text-gray-600">
                 In my spare time, I am constantly seeking opportunities to learn
                 and grow as a developer, including staying up-to-date on the
                 latest technologies, working on personal projects, and helping

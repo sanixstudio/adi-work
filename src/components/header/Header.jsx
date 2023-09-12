@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
+import ToggleTheme from "../toggleTheme/ToggleTheme";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,8 @@ const Header = () => {
           </a>
         </div>
 
+        <ToggleTheme />
+
         {/* Nav */}
         <div className="relative">
           <span className="block md:hidden cursor-pointer" onClick={toggleMenu}>
@@ -45,7 +48,7 @@ const Header = () => {
           <ul className="hidden md:flex space-x-10">
             <li>
               <Link
-                to="/"
+                to="#home"
                 smooth={true}
                 duration={500}
                 className="text-white hover:text-gray-300 cursor-pointer"
@@ -112,7 +115,8 @@ const Header = () => {
                 <ul className="text-center">
                   <li>
                     <Link
-                      to="/"
+                      to="#home"
+                      smooth={true}
                       className="block py-2 hover:text-gray-300 cursor-pointer"
                     >
                       Home

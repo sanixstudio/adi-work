@@ -2,13 +2,18 @@
 import { useState } from "react";
 import { Element } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
-import { BsCodeSlash } from "react-icons/bs";
 import { LuMousePointerClick } from "react-icons/lu";
+import { AiFillGithub } from "react-icons/ai";
+
+import infomovia from "../../assets/images/infomovia.png";
+import travelTracker from "../../assets/images/travel.png";
+import calmora from "../../assets/images/calmora.svg";
+import beerApp from "../../assets/images/beer.png";
 
 const ProjectCard = ({ project }) => {
   return (
     <motion.div
-      className="relative group"
+      className="relative group border p-4 bg-slate-200"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
@@ -17,32 +22,29 @@ const ProjectCard = ({ project }) => {
       <img
         src={project.image}
         alt={project.name}
-        className="w-full h-auto max-h-[300px] object-cover rounded-md transform transition-transform group-hover:scale-105"
+        className="w-full h-auto max-h-[300px] object-contain rounded-md transform transition-transform"
       />
+      <span className="font-bold text-white text-center block py-3 mt-2 bg-slate-600 rounded-md">{project.name}</span>
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm group-hover:bg-black/50 transition-opacity">
         <div className="flex flex-col gap-4 text-white text-center">
-          <div className="flex w-full gap-4 border px-4 rounded-md items-center">
-            <a
-              href={project.codeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block font-bold text-lg"
-            >
-              Code
-            </a>
-            <BsCodeSlash size={36} />
-          </div>
-          <div className="flex w-full gap-4 border px-4 rounded-md items-center">
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block font-bold text-lg"
-            >
-              Demo
-            </a>
+          <a
+            href={project.codeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex font-bold px-4 justify-center items-center gap-4 p-2 rounded-md hover:bg-white/50 text-lg border bg-white/20"
+          >
+            <span>Code</span>
+            <AiFillGithub size={36} />
+          </a>
+          <a
+            href={project.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex font-bold px-4 justify-center items-center gap-4 p-2 rounded-md hover:bg-white/50 text-lg border bg-white/20"
+          >
+            <span>Demo</span>
             <LuMousePointerClick size={36} />
-          </div>
+          </a>
         </div>
       </div>
     </motion.div>
@@ -52,32 +54,32 @@ const ProjectCard = ({ project }) => {
 const Work = () => {
   const projects = [
     {
-      type: "Front-end",
-      name: "Project 1",
-      image: "https://picsum.photos/id/297/200/300",
-      codeUrl: "https://github.com/project1",
-      demoUrl: "https://demo.project1.com",
+      type: "Full-stack",
+      name: "Infomovia",
+      image: infomovia,
+      codeUrl: "https://github.com/sanixstudio/infomovia3.0.git",
+      demoUrl: "https://infomovia3-0.vercel.app/",
     },
     {
-      type: "Back-end",
-      name: "Project 2",
-      image: "https://picsum.photos/id/27/200/300",
-      codeUrl: "https://github.com/project2",
-      demoUrl: "https://demo.project2.com",
+      type: "Front-end",
+      name: "Travel Tracker",
+      image: travelTracker,
+      codeUrl: "https://github.com/sanixstudio/travel-tracker-vite",
+      demoUrl: "https://travel-tracker-wine.vercel.app/",
+    },
+    {
+      type: "Front-end",
+      name: "Calmora",
+      image: calmora,
+      codeUrl: "https://github.com/sanixstudio/calmora",
+      demoUrl: "https://calmora.vercel.app/",
     },
     {
       type: "Vanilla",
-      name: "Project 3",
-      image: "https://picsum.photos/id/237/200/300",
-      codeUrl: "https://github.com/project3",
-      demoUrl: "https://demo.project3.com",
-    },
-    {
-      type: "Back-end",
-      name: "Project 4",
-      image: "https://picsum.photos/id/637/200/300",
-      codeUrl: "https://github.com/project4",
-      demoUrl: "https://demo.project4.com",
+      name: "Beer App",
+      image: beerApp,
+      codeUrl: "https://github.com/sanixstudio/beerApp",
+      demoUrl: "https://sanixstudio.github.io/beerApp/",
     },
   ];
 
@@ -90,20 +92,21 @@ const Work = () => {
 
   return (
     <Element name="work" id="#work">
-      <div className="min-h-screen flex justify-center items-center bg-gradient-to-b from-slate-200 to-slate-100">
-        <div className="container my-20 px-20 mx-auto p-4">
+      <div className="min-h-screen flex justify-center items-center bg-gray-100">
+        <div className="container my-20 px-10 mx-auto p-4">
           <h1 className="text-4xl md:text-6xl mb-20 font-bold uppercase">
             Projects
           </h1>
           <div className="mb-4">
             <select
-              className="border p-2 rounded-md mb-20"
+              className="border w-full sm:w-[236px] p-2 py-3 rounded-md mb-20 bg-slate-700 text-white"
               onChange={(e) => setSelectedType(e.target.value)}
             >
               <option value="All">All</option>
               <option value="Front-end">Front-end</option>
-              <option value="Back-end">Back-end</option>
+              <option value="Full-stack">Full-stack</option>
               <option value="Vanilla">Vanilla</option>
+              <option value="Ai">AI App</option>
             </select>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

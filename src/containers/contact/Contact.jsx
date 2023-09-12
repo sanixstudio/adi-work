@@ -43,9 +43,9 @@ const Contact = () => {
   };
 
   return (
-    <Element name="contact" id="contact">
+    <Element name="contact" id="#contact">
       <ToastContainer />
-      <div className="min-h-screen flex justify-center items-center">
+      <div className="min-h-screen -mb-28 flex justify-center items-center">
         <div className="pt-20 md:pt-0 p-4 md:px-40 mb-24 w-full">
           <div className="md:my-20 pb-20 flex flex-col md:max-w-[1440px] mx-auto">
             <motion.div
