@@ -18,8 +18,8 @@ const ToggleTheme = () => {
         {isDarkMode ? (
           <motion.div
             key="sun"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ x: -30, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
             <FiSun size={20} className="mr-1" />
@@ -27,8 +27,8 @@ const ToggleTheme = () => {
         ) : (
           <motion.div
             key="moon"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ x: 30, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
             <FiMoon size={20} className="mr-1" />
@@ -36,7 +36,7 @@ const ToggleTheme = () => {
         )}
       </AnimatePresence>
 
-      {isDarkMode ? (
+      {/* {isDarkMode ? (
         <motion.div
           key="light"
           initial={{ y: 50, opacity: 0 }}
@@ -54,7 +54,7 @@ const ToggleTheme = () => {
         >
           Dark
         </motion.div>
-      )}
+      )} */}
     </button>
   );
 };
