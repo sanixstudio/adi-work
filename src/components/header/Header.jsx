@@ -22,8 +22,8 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-[#1F2937] p-4 z-10 fixed w-full">
-      <div className="container mx-auto flex justify-between items-center">
+    <div className="bg-[#1F2937] p-4 z-10 fixed top-0 left-0 ring-0 w-full">
+      <div className="w-full mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
           <a href="/">
