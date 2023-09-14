@@ -25,7 +25,7 @@ const About = () => {
     <Element name="about">
       <div
         className={`${
-          isDark ? "bg-slate-600 text-white" : "bg-gray-100"
+          isDark ? "bg-slate-800 text-white" : "bg-gray-100"
         } min-h-screen px-10 flex items-center`}
         id="#about"
       >

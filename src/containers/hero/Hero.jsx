@@ -14,7 +14,7 @@ const Hero = () => {
     <Element name="home" id="#home">
       <div
         className={`${
-          isDark ? "bg-slate-700 text-white" : ""
+          isDark ? "bg-slate-900 text-white" : ""
         } mt-10 flex text-center px-4 flex-col justify-center w-full items-center min-h-screen`}
       >
         <img

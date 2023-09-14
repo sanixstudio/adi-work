@@ -49,7 +49,7 @@ const Contact = () => {
       <ToastContainer />
       <div
         className={`${
-          isDark ? "bg-slate-700 text-white" : ""
+          isDark ? "bg-slate-900 text-white" : ""
         } min-h-screen -mb-28 flex justify-center items-center`}
       >
         <div className="pt-20 md:pt-0 p-4 md:px-40 mb-24 w-full">

@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <div
       className={`${
-        isDark ? "text-gray-300 bg-slate-700" : "text-slate-400"
-      } max-w-screen pt-4 flex flex-col items-center pb-10`}
+        isDark ? "text-gray-300 bg-slate-900" : "text-slate-400"
+      } max-w-screen pt-4 flex flex-col items-center pb-5`}
     >
       <img
         src={footerLogo}

@@ -13,7 +13,7 @@ const Services = () => {
 
   return (
     <Element name="services">
-      <div className={`${isDark ? "bg-slate-700" : ""}`}>
+      <div className={`${isDark ? "bg-slate-900" : ""}`}>
         <div
           className={`${
             isDark ? "text-white" : ""
@@ -45,7 +45,9 @@ const Services = () => {
               className={`mt-10 flex flex-wrap justify-center items-start gap-20 w-full`}
             >
               <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-                <MdDeveloperMode size={64} />
+                <div className={`${isDark ? "bg-slate-300" : "bg-slate-200"} rounded-full p-4`}>
+                  <MdDeveloperMode size={64} />
+                </div>
                 <p className="leading-7">
                   <span
                     className={`text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block ${
@@ -64,7 +66,9 @@ const Services = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-                <TbStack3 size={64} />
+                <div className={`${isDark ? "bg-slate-300" : "bg-slate-200"} rounded-full p-4`}>
+                  <TbStack3 size={64} />
+                </div>
                 <p className="leading-7">
                   <span
                     className={`text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block ${
@@ -82,7 +86,9 @@ const Services = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-                <GrOptimize size={64} />
+                <div className={`${isDark ? "bg-slate-300" : "bg-slate-200"} rounded-full p-4`}>
+                  <GrOptimize size={64} />
+                </div>
                 <p className="leading-7">
                   <span
                     className={`text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block ${
@@ -101,7 +107,9 @@ const Services = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-                <img src={mobileFriendly} alt="service" />
+                <div className={`${isDark ? "bg-slate-300" : "bg-slate-200"} rounded-full p-4`}>
+                  <img src={mobileFriendly} alt="service" />
+                </div>
                 <p className="leading-7">
                   <span
                     className={`text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block ${

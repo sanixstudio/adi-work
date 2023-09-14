@@ -17,7 +17,9 @@ const ProjectCard = ({ project }) => {
 
   return (
     <motion.div
-      className={`relative group p-4 ${isDark ? "bg-slate-500" : "bg-slate-200"}`}
+      className={`relative group p-4 rounded-lg ${
+        isDark ? "bg-slate-700" : "bg-slate-200 shadow-xl"
+      }`}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
@@ -27,13 +29,13 @@ const ProjectCard = ({ project }) => {
         <img
           src={project.image}
           alt={project.name}
-          className="w-full h-auto max-h-[300px] object-contain rounded-md transform transition-transform"
+          className="w-full h-auto max-h-[300px] object-contain rounded-lg transform transition-transform"
         />
         <span className="font-bold text-white text-center block py-3 mt-2 bg-slate-600 rounded-md">
           {project.name}
         </span>
       </div>
-      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm group-hover:bg-black/50 transition-opacity">
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm group-hover:bg-black/50 transition-opacity rounded-lg">
         <div className="flex flex-col gap-4 text-white text-center">
           <a
             href={project.codeUrl}
@@ -109,7 +111,11 @@ const Work = () => {
 
   return (
     <Element name="work" id="#work">
-      <div className={`${isDark ? "bg-slate-600 text-white" : "bg-gray-100"} min-h-screen flex justify-center items-center`}>
+      <div
+        className={`${
+          isDark ? "bg-slate-800 text-white" : "bg-gray-100"
+        } min-h-screen flex justify-center items-center`}
+      >
         <div className="container my-20 px-10 mx-auto p-4">
           <h1 className="text-4xl md:text-6xl mb-20 font-bold uppercase">
             Projects
