@@ -3,10 +3,12 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 
+import ThemeContextProvider from "./context/themeContext";
+
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("/public/service-worker.js") // Adjust the path to your service worker file
+      .register("/public/service-worker.js")
       .then((registration) => {
         console.log(
           "Service Worker registered with scope:",
@@ -21,6 +23,8 @@ if ("serviceWorker" in navigator) {
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <ThemeContextProvider>
+      <App />
+    </ThemeContextProvider>
   </React.StrictMode>
 );

@@ -15,12 +15,18 @@ import {
 } from "react-icons/bi";
 
 import developer from "../../assets/images/developer.png";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/themeContext";
 
 const About = () => {
+  const { isDark } = useContext(ThemeContext);
+
   return (
     <Element name="about">
       <div
-        className="min-h-screen px-10 bg-gray-100 flex items-center"
+        className={`${
+          isDark ? "bg-slate-600 text-white" : "bg-gray-100"
+        } min-h-screen px-10 flex items-center`}
         id="#about"
       >
         <div className="my-20 flex flex-col md:max-w-[1440px] mx-auto">
@@ -55,7 +61,7 @@ const About = () => {
               <h2 className="mt-28 md:mt-0 text-4xl mb-10 font-bold uppercase">
                 A little about myself
               </h2>
-              <p className="mb-10 leading-7 text-lg text-gray-600">
+              <p className={`mb-10 leading-7 text-lg ${isDark ? "text-gray-300" : "gray-600"}`}>
                 I&apos;m a full-stack software engineer based in the Bay Area. I
                 specialize in helping startups grow their businesses by creating
                 intuitive and visually appealing user interfaces. With a strong
@@ -63,7 +69,7 @@ const About = () => {
                 the skills and experience necessary to tackle complex problems
                 and bring business ideas to life.
               </p>
-              <p className="leading-7 text-lg text-gray-600">
+              <p className={`leading-7 text-lg ${isDark ? "text-gray-300" : "gray-600"}`}>
                 In my spare time, I am constantly seeking opportunities to learn
                 and grow as a developer, including staying up-to-date on the
                 latest technologies, working on personal projects, and helping

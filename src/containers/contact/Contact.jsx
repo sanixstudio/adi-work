@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import { BiSolidSend } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
@@ -7,8 +7,11 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Element } from "react-scroll";
+import { ThemeContext } from "../../context/themeContext";
 
 const Contact = () => {
+  const { isDark } = useContext(ThemeContext);
+
   const formRef = useRef(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,7 +20,6 @@ const Contact = () => {
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -45,7 +47,11 @@ const Contact = () => {
   return (
     <Element name="contact" id="#contact">
       <ToastContainer />
-      <div className="min-h-screen -mb-28 flex justify-center items-center">
+      <div
+        className={`${
+          isDark ? "bg-slate-700 text-white" : ""
+        } min-h-screen -mb-28 flex justify-center items-center`}
+      >
         <div className="pt-20 md:pt-0 p-4 md:px-40 mb-24 w-full">
           <div className="md:my-20 pb-20 flex flex-col md:max-w-[1440px] mx-auto">
             <motion.div
@@ -106,7 +112,9 @@ const Contact = () => {
                   placeholder="your name"
                   onChange={(event) => setName(event.target.value)}
                   required
-                  className="w-full bg-transparent outline-none focus:bg-slate-100 px-4 py-3 border border-slate-600 mb-3 rounded-md "
+                  className={`w-full bg-transparent outline-none focus:bg-slate-100 px-4 py-3 border ${
+                    isDark ? "border-slate-500" : "border-slate-600"
+                  } mb-3 rounded-md `}
                 />
 
                 <label className="uppercase tracking-wider" htmlFor="email">
@@ -120,7 +128,9 @@ const Contact = () => {
                   placeholder="your email"
                   onChange={(event) => setEmail(event.target.value)}
                   required
-                  className="w-full bg-transparent outline-none focus:bg-slate-100 px-4 py-3 border border-slate-600 mb-3 rounded-md "
+                  className={`w-full bg-transparent outline-none focus:bg-slate-100 px-4 py-3 border ${
+                    isDark ? "border-slate-500" : "border-slate-600"
+                  } mb-3 rounded-md `}
                 />
 
                 <label className="uppercase tracking-wider" htmlFor="message">
@@ -133,7 +143,9 @@ const Contact = () => {
                   placeholder="your message"
                   onChange={(event) => setMessage(event.target.value)}
                   required
-                  className="w-full bg-transparent outline-none focus:bg-slate-100 px-4 py-3 border border-slate-600 mb-3 min-h-[200px] rounded-md "
+                  className={`w-full bg-transparent outline-none focus:bg-slate-100 px-4 py-3 border ${
+                    isDark ? "border-slate-500" : "border-slate-600"
+                  } mb-3 min-h-[200px] rounded-md `}
                 ></textarea>
 
                 <button className="flex justify-center items-center rounded-md gap-3 p-3 mt-5 h-fit border border-slate-400 hover:border-slate-600 mb-3 outline-none hover:bg-slate-500 transition-all ease-out active:bg-slate-400 focus:bg-slate-500">

@@ -4,11 +4,19 @@ import { AiOutlineMail } from "react-icons/ai";
 
 import imageSrc from "../../assets/images/adi2.jpg";
 import { Element, Link } from "react-scroll";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/themeContext";
 
 const Hero = () => {
+  const { isDark } = useContext(ThemeContext);
+
   return (
     <Element name="home" id="#home">
-      <div className="mt-10 flex text-center px-4 flex-col justify-center w-full items-center min-h-screen">
+      <div
+        className={`${
+          isDark ? "bg-slate-700 text-white" : ""
+        } mt-10 flex text-center px-4 flex-col justify-center w-full items-center min-h-screen`}
+      >
         <img
           src={imageSrc}
           alt="Adnan Niaz"
@@ -20,7 +28,11 @@ const Hero = () => {
         <h2 className="text-2xl sm:text-4xl py-2 font-bold">
           Full Stack Developer & Front End Specialist
         </h2>
-        <p className="hidden sm:block sm:text-xl pt-10 max-w-4xl leading-8 text-gray-500">
+        <p
+          className={`hidden sm:block sm:text-xl pt-10 max-w-4xl leading-8 ${
+            isDark ? "text-gray-400" : "text-gray-500"
+          }`}
+        >
           I engineer captivating user experiences, merging innovation and
           full-stack expertise to realize your digital vision.
         </p>

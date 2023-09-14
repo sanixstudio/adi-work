@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Element } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import { LuMousePointerClick } from "react-icons/lu";
@@ -10,11 +10,14 @@ import travelTracker from "../../assets/images/travel.png";
 import calmora from "../../assets/images/calmora.svg";
 import beerApp from "../../assets/images/beer.png";
 import chatBot from "../../assets/images/chatbot.png";
+import { ThemeContext } from "../../context/themeContext";
 
 const ProjectCard = ({ project }) => {
+  const { isDark } = useContext(ThemeContext);
+
   return (
     <motion.div
-      className="relative group border p-4 bg-slate-200"
+      className={`relative group p-4 ${isDark ? "bg-slate-500" : "bg-slate-200"}`}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
@@ -57,6 +60,8 @@ const ProjectCard = ({ project }) => {
 };
 
 const Work = () => {
+  const { isDark } = useContext(ThemeContext);
+
   const projects = [
     {
       type: "Full-stack",
@@ -104,7 +109,7 @@ const Work = () => {
 
   return (
     <Element name="work" id="#work">
-      <div className="min-h-screen flex justify-center items-center bg-gray-100">
+      <div className={`${isDark ? "bg-slate-600 text-white" : "bg-gray-100"} min-h-screen flex justify-center items-center`}>
         <div className="container my-20 px-10 mx-auto p-4">
           <h1 className="text-4xl md:text-6xl mb-20 font-bold uppercase">
             Projects
