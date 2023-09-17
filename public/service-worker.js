@@ -6,7 +6,6 @@ const cacheFiles = [
   '/index.html',
   '/static/css/main.chunk.css',
   '/static/js/main.chunk.js',
-  // Add more assets to cache as needed
 ];
 
 self.addEventListener('install', (e) => {

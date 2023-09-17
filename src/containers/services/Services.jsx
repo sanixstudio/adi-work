@@ -17,7 +17,7 @@ const Services = () => {
         <div
           className={`${
             isDark ? "text-white" : ""
-          }flex flex-col justify-center py-40 pb-60 md:max-w-[1440px] min-h-screen mx-auto px-10`}
+          } flex flex-col justify-center md:max-w-[1440px] min-h-screen mx-auto px-10`}
           id="#services"
         >
           <h1
