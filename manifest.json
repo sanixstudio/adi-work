@@ -2,7 +2,7 @@
   "name": "Adi Portfolio",
   "short_name": "Adi-portfolio",
   "description": "Adnan Niaz portfolio with introduction and projects",
-  "start_url": "/public",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
