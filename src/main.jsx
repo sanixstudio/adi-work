@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 
 import ThemeContextProvider from "./context/themeContext";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
@@ -21,10 +22,14 @@ if ("serviceWorker" in navigator) {
   });
 }
 
+const router = createBrowserRouter([{ path: "/", element: <App /> }]);
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeContextProvider>
-      <App />
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
     </ThemeContextProvider>
   </React.StrictMode>
 );

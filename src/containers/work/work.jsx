@@ -18,7 +18,9 @@ const ProjectCard = ({ project }) => {
   return (
     <motion.div
       className={`relative group p-4 rounded-lg ${
-        isDark ? "bg-slate-700" : "bg-slate-200 shadow-xl"
+        isDark
+          ? "border border-slate-700 bg-gradient-to-r from-slate-700 to-black/0"
+          : "bg-slate-200 shadow-xl"
       }`}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -88,6 +90,13 @@ const Work = () => {
     },
     {
       type: "Vanilla",
+      name: "Wear Mahsa",
+      image: beerApp,
+      codeUrl: "",
+      demoUrl: "https://www.wearmahsa.com/",
+    },
+    {
+      type: "Vanilla",
       name: "Beer App",
       image: beerApp,
       codeUrl: "https://github.com/sanixstudio/beerApp",
@@ -113,9 +122,14 @@ const Work = () => {
     <Element name="work" id="#work">
       <div
         className={`${
-          isDark ? "bg-slate-800 text-white" : "bg-gray-100"
-        } min-h-screen flex justify-center items-center`}
+          isDark ? "bg-slate-900 text-white" : "bg-gray-100"
+        } min-h-screen flex justify-center items-center relative`}
       >
+        <div
+          className={`absolute w-[600px] h-[600px] rounded-full blur-[8em] ${
+            isDark ? "bg-blue-900/70" : ""
+          }`}
+        ></div>
         <div className="container my-20 px-10 mx-auto p-4">
           <h1 className="text-4xl md:text-6xl mb-20 font-bold uppercase">
             Projects

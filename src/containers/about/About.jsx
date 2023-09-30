@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { SiExpress } from "react-icons/si";
@@ -15,7 +16,6 @@ import {
 } from "react-icons/bi";
 
 import developer from "../../assets/images/developer.png";
-import { useContext } from "react";
 import { ThemeContext } from "../../context/themeContext";
 
 const About = () => {
@@ -25,11 +25,16 @@ const About = () => {
     <Element name="about">
       <div
         className={`${
-          isDark ? "bg-slate-800 text-white" : "bg-gray-100"
+          isDark ? "bg-slate-900 text-white" : "bg-gray-100"
         } min-h-screen px-10 flex items-center`}
         id="#about"
       >
-        <div className="my-20 flex flex-col md:max-w-[1440px] mx-auto">
+        <div className="my-20 z-10 flex flex-col relative md:max-w-[1440px] mx-auto">
+          <div
+            className={`absolute w-[600px] left-0 h-[600px] rounded-full blur-[8em] ${
+              isDark ? "bg-blue-900/70" : ""
+            }`}
+          ></div>
           <motion.div
             initial={{ x: "-300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -61,7 +66,11 @@ const About = () => {
               <h2 className="mt-28 md:mt-0 text-4xl mb-10 font-bold uppercase">
                 A little about myself
               </h2>
-              <p className={`mb-10 leading-7 text-lg ${isDark ? "text-gray-300" : "gray-600"}`}>
+              <p
+                className={`mb-10 leading-7 text-lg ${
+                  isDark ? "text-gray-300" : "gray-600"
+                }`}
+              >
                 I&apos;m a full-stack software engineer based in the Bay Area. I
                 specialize in helping startups grow their businesses by creating
                 intuitive and visually appealing user interfaces. With a strong
@@ -69,7 +78,11 @@ const About = () => {
                 the skills and experience necessary to tackle complex problems
                 and bring business ideas to life.
               </p>
-              <p className={`leading-7 text-lg ${isDark ? "text-gray-300" : "gray-600"}`}>
+              <p
+                className={`leading-7 text-lg ${
+                  isDark ? "text-gray-300" : "gray-600"
+                }`}
+              >
                 In my spare time, I am constantly seeking opportunities to learn
                 and grow as a developer, including staying up-to-date on the
                 latest technologies, working on personal projects, and helping

@@ -17,9 +17,14 @@ const Services = () => {
         <div
           className={`${
             isDark ? "text-white" : ""
-          } flex flex-col justify-center md:max-w-[1440px] min-h-screen mx-auto px-10`}
+          } flex flex-col justify-center py-20 relative md:max-w-[1440px] min-h-screen mx-auto px-10`}
           id="#services"
         >
+          <div
+            className={`absolute w-[700px] translate-x-64 h-[700px] rounded-full blur-[8em] ${
+              isDark ? "bg-blue-900/70" : ""
+            }`}
+          ></div>
           <h1
             className={`text-4xl md:text-6xl font-bold uppercase ${
               isDark ? "text-white" : ""
@@ -45,8 +50,12 @@ const Services = () => {
               className={`mt-10 flex flex-wrap justify-center items-start gap-20 w-full`}
             >
               <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-                <div className={`${isDark ? "bg-slate-300" : "bg-slate-200"} rounded-full p-4`}>
-                  <MdDeveloperMode size={64} />
+                <div
+                  className={`${
+                    isDark ? "bg-slate-300" : "bg-slate-200"
+                  } rounded-full p-4`}
+                >
+                  <MdDeveloperMode size={64} color={isDark ? "#000" : ""} />
                 </div>
                 <p className="leading-7">
                   <span
@@ -66,8 +75,12 @@ const Services = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-                <div className={`${isDark ? "bg-slate-300" : "bg-slate-200"} rounded-full p-4`}>
-                  <TbStack3 size={64} />
+                <div
+                  className={`${
+                    isDark ? "bg-slate-300" : "bg-slate-200"
+                  } rounded-full p-4`}
+                >
+                  <TbStack3 size={64} color={isDark ? "#000" : ""} />
                 </div>
                 <p className="leading-7">
                   <span
@@ -86,7 +99,11 @@ const Services = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-                <div className={`${isDark ? "bg-slate-300" : "bg-slate-200"} rounded-full p-4`}>
+                <div
+                  className={`${
+                    isDark ? "bg-slate-300" : "bg-slate-200"
+                  } rounded-full p-4`}
+                >
                   <GrOptimize size={64} />
                 </div>
                 <p className="leading-7">
@@ -107,12 +124,16 @@ const Services = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-5 items-center md:max-w-[280px]">
-                <div className={`${isDark ? "bg-slate-300" : "bg-slate-200"} rounded-full p-4`}>
+                <div
+                  className={`${
+                    isDark ? "bg-slate-300" : "bg-slate-200"
+                  } rounded-full p-4`}
+                >
                   <img src={mobileFriendly} alt="service" />
                 </div>
                 <p className="leading-7">
                   <span
-                    className={`text-center tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block ${
+                    className={`text-center tracking-widest bottom-0 border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block ${
                       isDark ? "text-white" : ""
                     }`}
                   >

@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 import ToggleTheme from "../toggleTheme/ToggleTheme";
+import { ThemeContext } from "../../context/themeContext";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { isDark } = useContext(ThemeContext);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -22,7 +25,11 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-[#1F2937] p-4 z-10 fixed top-0 left-0 ring-0 w-full">
+    <div
+      className={`${
+        isDark ? "bg-white/20" : "bg-[#1F2937]"
+      } backdrop-blur-xl p-4 z-20 fixed top-0 left-0 ring-0 w-full`}
+    >
       <div className="w-full mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -33,10 +40,9 @@ const Header = () => {
           </a>
         </div>
 
-        <ToggleTheme />
-
         {/* Nav */}
-        <div className="relative">
+        <div className="relative flex gap-8">
+          <ToggleTheme />
           <span className="block md:hidden cursor-pointer" onClick={toggleMenu}>
             {isOpen ? (
               <FiX color="#fff" size={24} />
