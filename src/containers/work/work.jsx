@@ -5,12 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { LuMousePointerClick } from "react-icons/lu";
 import { AiFillGithub } from "react-icons/ai";
 
+import { ThemeContext } from "../../context/themeContext";
+
 import infomovia from "../../assets/images/infomovia.png";
 import travelTracker from "../../assets/images/travel.png";
 import calmora from "../../assets/images/calmora.svg";
 import beerApp from "../../assets/images/beer.png";
 import chatBot from "../../assets/images/chatbot.png";
-import { ThemeContext } from "../../context/themeContext";
+import dress from "../../assets/images/dress.png";
 
 const ProjectCard = ({ project }) => {
   const { isDark } = useContext(ThemeContext);
@@ -31,23 +33,25 @@ const ProjectCard = ({ project }) => {
         <img
           src={project.image}
           alt={project.name}
-          className="w-full h-auto max-h-[300px] object-contain rounded-lg transform transition-transform"
+          className="w-full h-auto max-h-[200px] object-contain rounded-lg transform transition-transform"
         />
-        <span className="font-bold text-white text-center block py-3 mt-2 bg-slate-600 rounded-md">
+        <span className="font-bold text-white text-center block py-3 mt-4 bg-slate-600 rounded-md">
           {project.name}
         </span>
       </div>
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-sm group-hover:bg-black/50 transition-opacity rounded-lg">
         <div className="flex flex-col gap-4 text-white text-center">
-          <a
-            href={project.codeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex font-bold px-4 justify-center items-center gap-4 p-2 rounded-md hover:bg-white/50 text-lg border bg-white/20"
-          >
-            <span>Code</span>
-            <AiFillGithub size={36} />
-          </a>
+          {project.codeUrl && (
+            <a
+              href={project.codeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex font-bold px-4 justify-center items-center gap-4 p-2 rounded-md hover:bg-white/50 text-lg border bg-white/20"
+            >
+              <span>Code</span>
+              <AiFillGithub size={36} />
+            </a>
+          )}
           <a
             href={project.demoUrl}
             target="_blank"
@@ -91,7 +95,7 @@ const Work = () => {
     {
       type: "Vanilla",
       name: "Wear Mahsa",
-      image: beerApp,
+      image: dress,
       codeUrl: "",
       demoUrl: "https://www.wearmahsa.com/",
     },
@@ -123,7 +127,7 @@ const Work = () => {
       <div
         className={`${
           isDark ? "bg-slate-900 text-white" : "bg-gray-100"
-        } min-h-screen flex justify-center items-center relative`}
+        } overflow-hidden min-h-screen flex justify-center items-center relative`}
       >
         <div
           className={`absolute w-[600px] h-[600px] rounded-full blur-[8em] ${

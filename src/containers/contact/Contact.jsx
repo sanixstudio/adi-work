@@ -50,7 +50,7 @@ const Contact = () => {
       <div
         className={`${
           isDark ? "bg-slate-900 text-white" : ""
-        } min-h-screen -mb-28 flex justify-center items-center`}
+        } min-h-screen overflow-hidden -mb-28 flex justify-center items-center`}
       >
         <div className="pt-20 md:pt-0 p-4 md:px-40 mb-24 w-full">
           <div className="md:my-20 pb-20 flex flex-col relative md:max-w-[1440px] mx-auto">

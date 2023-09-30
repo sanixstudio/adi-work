@@ -26,7 +26,7 @@ const About = () => {
       <div
         className={`${
           isDark ? "bg-slate-900 text-white" : "bg-gray-100"
-        } min-h-screen px-10 flex items-center`}
+        } overflow-hidden min-h-screen px-10 flex items-center`}
         id="#about"
       >
         <div className="my-20 z-10 flex flex-col relative md:max-w-[1440px] mx-auto">

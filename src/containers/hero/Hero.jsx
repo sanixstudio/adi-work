@@ -15,7 +15,7 @@ const Hero = () => {
       <div
         className={`${
           isDark ? "bg-slate-900 text-white" : ""
-        } flex flex-col justify-center relative text-center px-4 w-full items-center min-h-screen`}
+        } flex flex-col justify-center relative overflow-hidden text-center px-4 w-full items-center min-h-screen`}
       >
         <img
           src={imageSrc}

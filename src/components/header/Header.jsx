@@ -111,14 +111,14 @@ const Header = () => {
           <AnimatePresence>
             {isOpen && (
               <motion.div
-                className="fixed top-14 left-0 w-full bg-slate-800 text-white py-4"
+                className="fixed top-14 left-0 w-full bg-slate-800 text-white py-10 md:hidden"
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
                 variants={menuVariants}
                 transition={{ type: "spring", stiffness: 120, damping: 15 }}
               >
-                <ul className="text-center">
+                <ul className="text-center flex flex-col gap-4">
                   <li>
                     <Link
                       to="#home"
