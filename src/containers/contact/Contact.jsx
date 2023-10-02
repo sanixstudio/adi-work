@@ -117,8 +117,8 @@ const Contact = () => {
                   placeholder="your name"
                   onChange={(event) => setName(event.target.value)}
                   required
-                  className={`w-full bg-transparent outline-none focus:bg-slate-100 px-4 py-3 border ${
-                    isDark ? "border-slate-500" : "border-slate-600"
+                  className={`w-full bg-transparent outline-none px-4 py-3 border ${
+                    isDark ? "border-slate-500 focus:bg-slate-500" : "focus:bg-slate-200 border-slate-600"
                   } mb-3 rounded-md `}
                 />
 
@@ -133,8 +133,8 @@ const Contact = () => {
                   placeholder="your email"
                   onChange={(event) => setEmail(event.target.value)}
                   required
-                  className={`w-full bg-transparent outline-none focus:bg-slate-100 px-4 py-3 border ${
-                    isDark ? "border-slate-500" : "border-slate-600"
+                  className={`w-full bg-transparent outline-none px-4 py-3 border ${
+                    isDark ? "border-slate-500 focus:bg-slate-500" : "focus:bg-slate-200 border-slate-600"
                   } mb-3 rounded-md `}
                 />
 
@@ -148,8 +148,8 @@ const Contact = () => {
                   placeholder="your message"
                   onChange={(event) => setMessage(event.target.value)}
                   required
-                  className={`w-full bg-transparent outline-none focus:bg-slate-100 px-4 py-3 border ${
-                    isDark ? "border-slate-500" : "border-slate-600"
+                  className={`w-full bg-transparent outline-none px-4 py-3 border ${
+                    isDark ? "border-slate-500 focus:bg-slate-500" : "focus:bg-slate-200 border-slate-600"
                   } mb-3 min-h-[200px] rounded-md `}
                 ></textarea>
 
