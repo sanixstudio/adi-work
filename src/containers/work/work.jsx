@@ -9,6 +9,7 @@ import { ThemeContext } from "../../context/themeContext";
 
 import infomovia from "../../assets/images/infomovia.png";
 import travelTracker from "../../assets/images/travel.png";
+import heatherJansenImage from "../../assets/images/heatherHr.png";
 import calmora from "../../assets/images/calmora.svg";
 import beerApp from "../../assets/images/beer.png";
 import chatBot from "../../assets/images/chatbot.png";
@@ -84,6 +85,13 @@ const Work = () => {
       image: travelTracker,
       codeUrl: "https://github.com/sanixstudio/travel-tracker-vite",
       demoUrl: "https://travel-tracker-wine.vercel.app/",
+    },
+    {
+      type: "Front-end",
+      name: "Heather Jansen",
+      image: heatherJansenImage,
+      // codeUrl: "https://github.com/sanixstudio/travel-tracker-vite",
+      demoUrl: "https://hrj.design/",
     },
     {
       type: "Front-end",
